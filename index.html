@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-do list</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+  <div class="todo--container">
+    <div class="todo--header">
+      <h1 class="todo__title">todo</h1>
+      <button class="btn theme__switcher" aria-label="switch the colour theme"><img data-theme-icon src="icon-sun.svg" alt="sun icon"></button>
+    </div>
+    <div class="new--task">
+      <form action="" class="new--task--form" data-new-task-form>
+          <input class="new__task__input" type="text" placeholder="Create a new todo..." aria-label="Create a new task" data-new-task-input>
+          <input type="submit" class="btn create__task" aria-label="create new task" value="+">
+      </form>
+    </div>
+    <div class="todo--body">
+      <div class="tasks" data-task-container>
+      </div>
+      <div class="controls">
+        <p class="task__count" data-count-element>5 items left</p>
+         <div class="filters f__desktop">
+           <button class="btn filter__btn all" aria-label="show all tasks">All</button>
+           <button class="btn filter__btn active" aria-label="show all incomplete tasks">Active</button>
+           <button class="btn filter__btn completed"aria-label="show all completed tasks">Completed</button>
+         </div>
+         <div class="filter--btn--container">
+         <button class="btn filter__btn clear__completed" aria-label="clear all completed tasks">Clear completed</button>
+         </div>
+      </div>
+    </div>
+    <div class="controls controls--mob">
+        <button class="btn filter__btn all" aria-label="show all tasks">All</button>
+        <button class="btn filter__btn active" aria-label="show all incomplete tasks">Active</button>
+        <button class="btn filter__btn completed" aria-label="show all completed tasks">Completed</button>
+    </div>
+  </div>
+  <template id="task__template">
+    <div class="task">
+      <input type="checkbox">
+      <label><span class="custom__checkbox"></span></label>
+    </div>
+  </template>
+</body>
+</html>
